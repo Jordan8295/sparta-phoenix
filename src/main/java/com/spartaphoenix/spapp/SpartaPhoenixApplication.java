@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpAppApplication {
+public class SpartaPhoenixApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpAppApplication.class, args);
+		SpringApplication.run(SpartaPhoenixApplication.class, args);
 	}
 
 }

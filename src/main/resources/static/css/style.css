@@ -1,0 +1,56 @@
+body {
+    background-color: black;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto auto;
+    text-align: center;
+}
+
+.logo {
+    display: block;
+    margin: 10px auto;
+    width: 40%;
+}
+
+.message {
+    color: #EA5B0C;
+    display: inline-block;
+    margin: 10px auto;
+    font-size: 20pt;
+    font-family: 'Alata', sans-serif;
+}
+
+.social-links {
+    margin: 10px;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px !important;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
