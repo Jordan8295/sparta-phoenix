@@ -1,0 +1,26 @@
+.article-image-small {
+    min-width: 100px;
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+}
+
+.article-link {
+    color: black;
+}
+
+.article-link:hover {
+    color: black;
+}
+
+.article-image-container {
+    text-align: center;
+}
+
+.article {
+    margin: 20px 0 20px 0;
+}
+
+.article-preview {
+    vertical-align: middle;
+}

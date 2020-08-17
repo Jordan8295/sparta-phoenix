@@ -1,0 +1,27 @@
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <title>News</title>
+    <link href="/css/news.css" rel="stylesheet">
+</head>
+<body>
+<div layout:fragment="title">
+    <h1>News</h1>
+</div>
+<div layout:fragment="content">
+    <div class="container">
+        <div th:each="article : ${articles}" class="article row" th:id="${article.id}">
+            <div class="article-image-container col my-auto">
+                <a th:href="@{'/news/'+${article.id}}"><img class="article-image-small" src="images/logo.png"/></a>
+            </div>
+            <div class="article-preview col-8 my-auto">
+                <h2><a th:href="@{'/news/'+${article.id}}" class="article-link" th:text="${article.header}"></a></h2>
+                <p th:text="${article.preview}"></p>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

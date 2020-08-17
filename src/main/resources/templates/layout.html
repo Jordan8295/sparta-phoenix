@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="utf-8">
+    <title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE">Sparta Phoenix</title>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="/images/logo.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="/webjars/jquery/1.9.1/jquery.min.js"></script>
+
+    <script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="title">
+            <a th:href="@{/}" class="title-link">
+                <img class="logo" src="/images/logo.png">
+                <span class="title-name">Sparta Phoenix FC</span>
+            </a>
+        </div>
+        <nav class="navbar navbar-expand-lg sticky-top navbar-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon text-dark"></span>
+            </button>
+            <ul class="navbar-nav collapse navbar-collapse mx-auto" id="navbarCollapse">
+                <li class="nav-item">
+                    <a class="nav-link" th:classappend="${title == 'News' ? 'active' : ''}" th:href="@{/news}">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:classappend="${title == 'Player Profiles' ? 'active' : ''}" th:href="@{/player-profiles}">Player Profiles</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:classappend="${title == 'Fixtures and Results' ? 'active' : ''}" th:href="@{/fixtures-and-results}">Fixtures and Results</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:classappend="${title == 'Merchandise' ? 'active' : ''}" th:href="@{/merchandise}">Merchandise</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:classappend="${title == 'Contact Us' ? 'active' : ''}" th:href="@{/contact-us}">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container-fluid">
+        <div class="row content-row">
+            <div class="col-1 sp-border"></div>
+            <div class="col content">
+                <div layout:fragment="title"></div>
+                <hr>
+                <div layout:fragment="content"></div>
+            </div>
+            <div class="col-1 sp-border">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
